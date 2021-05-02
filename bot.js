@@ -30,6 +30,10 @@ async function handlemessage(d) {
                 break
         }
     }
+    if (chat_id == yourGroupId) {      //<--remember to change here to your group id
+        await tg(token, 'sendmessage',{
+            chat_id: chat_id,
+            })
 }
 async function handleinline(d) {
     let inline_query_id = d.id
